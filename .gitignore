@@ -1,0 +1,20 @@
+# Arquivos de compilação do Java
+# Não queremos enviar o código já compilado (.class), apenas o fonte (.java).
+bin/
+*.class
+
+# Dependências e bibliotecas
+# A boa prática é instruir o próximo desenvolvedor a baixar a dependência,
+# em vez de colocar o arquivo .jar de 8MB no repositório.
+lib/
+mysql/
+*.jar
+
+# Arquivos de configuração do ambiente do VS Code
+# Outros desenvolvedores podem usar outras IDEs ou configurações.
+.vscode/
+
+# Logs e arquivos temporários do sistema operacional
+*.log
+.DS_Store
+Thumbs.db
