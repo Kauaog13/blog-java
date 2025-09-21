@@ -6,22 +6,25 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class App extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        // Carrega o arquivo FXML da interface
-        Parent root = FXMLLoader.load(getClass().getResource("../view/BlogView.fxml"));
-        
-        // Cria a cena com o conteúdo da interface
-        Scene scene = new Scene(root);
-        
-        // Define o título da janela
-        primaryStage.setTitle("Meu Blog");
-        // Adiciona a cena à janela
-        primaryStage.setScene(scene);
-        // Exibe a janela
-        primaryStage.show();
+    public void start(Stage primaryStage) {
+        try {
+            // Carrega a tela de login como a primeira tela, usando caminho absoluto
+            Parent root = FXMLLoader.load(getClass().getResource("/com/blog/view/LoginView.fxml"));
+            
+            Scene scene = new Scene(root);
+            
+            primaryStage.setTitle("Login");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            System.err.println("Erro ao carregar a tela de login:");
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {

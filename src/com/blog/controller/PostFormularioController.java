@@ -1,4 +1,4 @@
-package com.blog.view;
+package com.blog.controller;
 
 import com.blog.model.Autor;
 import com.blog.model.Postagem;
